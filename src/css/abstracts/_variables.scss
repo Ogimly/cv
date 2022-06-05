@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// colors 
+$color-background: #fbfbfbee;
+$color-frame: #d9e9e8;
+$color-header: #d9e9e8;
+$color-sidebar: #d9e9e8;
+$color-footer: #dbd9d7;
+$color-title: #788b7a;
+$color-text: #454040;
+//blackout
+$color-blackout: rgba(0, 0, 0, 0.1);
+
+/// Relative or absolute URL where all assets are served from
+$base-url: '../assets/' !default;
+
+/// Breakpoints
+$breakpoint-medium: 600px !default;
+$breakpoint-large: 950px !default;
+
+// width and height of project
+$width-content: 1200px;
+$width-sidebar: 350px;
+$width-avatar: 200px;

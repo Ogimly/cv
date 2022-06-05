@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+/// Помощник для определения размера
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+/// Помощник для определения position
+@mixin left-top($left: 0, $top: 0) {
+    left: $left;
+    top: $top;
+}
+
+// -----------------------------------------------------------------------------
+/// медиазапросы
+/// width <= $breakpoint-large
+@mixin media-medium {
+    @media (max-width: $breakpoint-large) { @content; }
+}
+/// width <= $breakpoint-medium
+@mixin media-small {
+    @media (max-width: $breakpoint-medium) { @content; }
+}
+
+// -----------------------------------------------------------------------------
+/// Помощник для определения flex: вертикальные блоки, по умолчанию по всей высоте контейнера. 
+/// Выраввнивание по горизонтали - в параметре, по умолчанию по центру
+@mixin flex-vertical($align-items: center, $justify-content: space-between) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+/// Помощник для определения flex: горизонтальные блоки, по умолчанию по всей ширине контейнера. 
+/// Выраввнивание по вертикали - в параметре, по умолчанию по центру
+@mixin flex-horizontal($align-items: center, $justify-content: space-between) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
