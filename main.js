@@ -1,0 +1,1 @@
+window.onload=()=>{const e=document.getElementById("burger");e.addEventListener("click",(()=>{e.classList.toggle("burger_open")})),document.querySelectorAll(".nav__item").forEach((t=>{t.addEventListener("click",(()=>{e.classList.remove("burger_open")}))}))};
