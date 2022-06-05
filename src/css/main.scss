@@ -21,15 +21,15 @@
   //'base/helpers',
 
 // 4. Layout-related sections
-// @import
-//   'layout/wrapper',
-//   'layout/header',
-//   'layout/burger-menu',
-//   'layout/footer';
+@import
+  'layout/wrapper',
+  'layout/header',
+  'layout/burger-menu',
+  'layout/footer';
 
 // 5. Components
-// @import
-//   'components/pages';
+@import
+  'components/sidebar';
 
 // 6. Page-specific styles
 @import

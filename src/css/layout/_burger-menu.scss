@@ -126,7 +126,7 @@
   }
 
   .nav {
-    @include flex-horizontal(flex-start);
+    @include flex-vertical(flex-start);
     gap: 1px;
 
     margin: 7px 5px 0px;

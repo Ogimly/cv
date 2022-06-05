@@ -3,7 +3,7 @@
   background-color: $color-sidebar;
   width: 350px;
 
-  @include flex-vertical(flex-start);
+  @include flex-vertical(flex-start, flex-start);
   gap: 20px;
 }
 
