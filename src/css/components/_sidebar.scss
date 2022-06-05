@@ -6,6 +6,11 @@
   @include flex-vertical(flex-start, flex-start);
   gap: 20px;
 }
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+  }
+}
 
 .avatar__img {
   margin: auto;
@@ -21,12 +26,10 @@
   border-bottom: 3px solid $color-title;
   padding-bottom: 10px;
 }
-
 .profile__subtitle {
   padding-top: 10px;
   text-align: center;
 }
-
 .sidebar-section__title {
   padding-top: 20px;
   background-color: $color-frame;
@@ -37,48 +40,43 @@
 .sidebar-section__list {
   padding-top: 20px;
 }
-
 .sidebar-section__item {
   position: relative;
   padding-left: 30px;
 }
-
 .sidebar-section__link {
   color: $color-title;
+
+  &:hover {
+    color: $color-text;
+  }
 }
 
-.sidebar-section__link:hover {
-  color: $color-text;
-}
+.contacts__item {
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    @include size(21px);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 
-.contacts__item:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 7px;
-  width: 21px;
-  height: 21px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.contacts__item:nth-child(1):before {
-  top: 3px;
-  width: 24px;
-  height: 24px;
-  background-image: icon('pin.svg');
-}
-
-.contacts__item:nth-child(2):before {
-  background-image: icon('email.svg');
-}
-
-.contacts__item:nth-child(3):before {
-  background-image: icon('github.svg');
-}
-
-.contacts__item:nth-child(4):before {
-  background-image: icon('telegram.svg');
+  &:nth-child(1):before {
+    top: 3px;
+    @include size(24px);
+    background-image: icon('pin.svg');
+  }
+  &:nth-child(2):before {
+    background-image: icon('email.svg');
+  }
+  &:nth-child(3):before {
+    background-image: icon('github.svg');
+  }
+  &:nth-child(4):before {
+    background-image: icon('telegram.svg');
+  }
 }
 
 .skills__item:before {

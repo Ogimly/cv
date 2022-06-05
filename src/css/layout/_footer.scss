@@ -4,3 +4,8 @@
 
   @include flex-horizontal(center);
 }
+
+.logo__img {
+  display: block;
+  height: 40px;
+}

@@ -1,6 +1,11 @@
 .main {
   display: flex;
 }
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column;
+  }
+}
 
 .title {
   text-transform: uppercase;
@@ -23,7 +28,6 @@
 .summary .text {
   padding: 15px 0;
 }
-
 .education .text {
   padding-top: 15px;
 }
@@ -31,34 +35,18 @@
 .info-section__list {
   padding: 15px;
 }
-
 .info-section__item {
   position: relative;
   margin-left: 20px;
-}
 
-.info-section__item:before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: -20px;
-  width: 12px;
-  height: 12px;
-  border: 2px solid $color-title;
-  border-radius: 50%;
-}
-
-.logo__img {
-  display: block;
-  height: 40px;
-}
-
-@media (max-width: 600px) {
-  .main {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid $color-title;
+    border-radius: 50%;
   }
 }
