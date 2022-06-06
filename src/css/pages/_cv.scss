@@ -1,39 +1,22 @@
-.main {
+.cv {
   display: flex;
 }
 @media (max-width: 600px) {
-  .main {
+  .cv {
     flex-direction: column;
   }
-}
-
-.title {
-  text-transform: uppercase;
-  font-size: 24px;
 }
 
 .info {
   padding: 30px;
 }
 
-.info-section__title {
-  padding-top: 20px;
-  padding-left: 7px;
-  background-color: $color-frame;
-  color: $color-title;
-  letter-spacing: 0.2em;
-  border-bottom: 3px solid $color-title;
-}
-
-.summary .text {
-  padding: 15px 0;
-}
-.education .text {
-  padding-top: 15px;
+.info-section {
+  padding-bottom: 15px;
 }
 
 .info-section__list {
-  padding: 15px;
+  padding: 15px 15px 0 15px;
 }
 .info-section__item {
   position: relative;

@@ -1,0 +1,80 @@
+.portfolio {
+  display: flex;
+
+  .sidebar {
+    position: fixed;
+    z-index: 10;
+    height: 100vh;
+  }
+
+  .tasks {
+    padding: 20px;
+    padding-left: $width-sidebar + 20px;
+  }
+}
+@include media-small {
+  .portfolio {
+    flex-direction: column;
+
+    .sidebar {
+      position: static;
+      height: auto;
+    }
+
+    .tasks {
+      padding-left: 20px;
+    }
+  }
+}
+
+.tasks-section__title {
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.tasks-section__text {
+  font-size: 18px;
+}
+
+.tasks-section__list {
+  padding: 5px 5px 0 5px;
+}
+.tasks-section__item {
+  position: relative;
+  padding-left: 20px;
+  font-size: 18px;
+
+  &:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: $color-title;
+  }
+}
+
+.tasks-section__nav {
+  padding: 5px 0 10px 0;
+  @include flex-horizontal(center, space-around);
+  gap: 5px;
+
+  @include media-medium {
+    flex-wrap: wrap;
+  }
+}
+
+.tasks-section__link {
+  font-size: 18px;
+  padding: 5px 15px;
+  color: $color-title;
+  background-color: $color-frame;
+  border: 3px solid $color-title;
+  border-radius: 1em;
+
+  &:hover {
+    color: $color-text;
+  }
+}
+
+.tasks__img {
+  overflow: hidden;
+}

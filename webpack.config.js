@@ -27,7 +27,7 @@ module.exports = ({ development }) => ({
   devtool: development ? 'inline-source-map' : false,
 
   entry: {
-    main: ['./src/index.js', './src/css/main.scss'],
+    main: ['./src/scripts/index.js', './src/css/main.scss'],
   },
 
   output: {
@@ -68,6 +68,10 @@ module.exports = ({ development }) => ({
 
     new HtmlWebpackPlugin({
       template: './src/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'portfolio.html',
+      template: './src/portfolio.html',
     }),
 
     new MiniCssExtractPlugin({
