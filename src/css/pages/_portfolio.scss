@@ -33,7 +33,12 @@
 }
 
 .tasks-section__text {
+  padding-top: 0;
   font-size: 18px;
+}
+.tasks-section__text--bold {
+  padding-top: 10px;
+  font-weight: bold;
 }
 
 .tasks-section__list {
@@ -53,7 +58,7 @@
 }
 
 .tasks-section__nav {
-  padding: 5px 0 10px 0;
+  padding: 5px 0 5px 0;
   @include flex-horizontal(center, space-around);
   gap: 5px;
 
@@ -77,4 +82,5 @@
 
 .tasks__img {
   overflow: hidden;
+  padding-bottom: 10px;
 }

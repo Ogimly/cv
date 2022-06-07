@@ -17,9 +17,9 @@ const addBurgerHandler = () => {
 };
 
 //* TASKS *//
-const addPToDOM = (section, text) => {
+const addPToDOM = (section, text, boldClass = '') => {
   const p = document.createElement('p');
-  p.className = 'text tasks-section__text';
+  p.className = `text tasks-section__text${boldClass}`;
   p.innerHTML = text;
   section.appendChild(p);
 };
@@ -65,8 +65,8 @@ const addTasksToDOM = (tasks, taskData) => {
     h2.innerHTML = `${el.title}:`;
     section.appendChild(h2);
 
-    addPToDOM(section, el.description);
-    let list = el.descriptionList;
+    addPToDOM(section, el.learn, ' tasks-section__text--bold');
+    let list = el.learnList;
     addListToDOM(section, list);
 
     const nav = document.createElement('nav');
@@ -77,11 +77,11 @@ const addTasksToDOM = (tasks, taskData) => {
     addLinkToDOM(nav, 'View repository', el.repositoryLink);
     addLinkToDOM(nav, 'Open deploy', el.deployLink);
 
-    addImgToDOM(section, el.imgAlt, el.imgLink);
-
-    addPToDOM(section, el.learn);
-    list = el.learnList;
+    addPToDOM(section, el.description);
+    list = el.descriptionList;
     addListToDOM(section, list);
+
+    addImgToDOM(section, el.imgAlt, el.imgLink);
 
     tasks.appendChild(section);
   });
