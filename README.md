@@ -1,1 +1,0 @@
-https://ogimly.github.io/cv/
